@@ -5,9 +5,9 @@ class WeatherApi {
     this.apIKey = apIKey;
   }
 
-  loadWeather(search, callback) {
+  loadWeather(city, country, callback) {
     fetch(
-      `http://api.weatherapi.com/v1/current.json?key=${this.apIKey}=${search}&aqi=no`
+      `https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&lang=en&units=metric&appid=${this.apIKey}`
     )
       .then((info) => info.json())
       .then((responseJson) => {
