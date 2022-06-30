@@ -9,54 +9,46 @@ describe('WeatherApi', () => {
 
       fetch.mockResponseOnce(
         JSON.stringify({
-          response: {
-            results: [
-              {
-                weather: [
-                  {
-                    main: 'Clouds',
-                    icon: '04n',
-                  },
-                ],
-                main: {
-                  temp: 28.48,
-                  feels_like: 28.61,
-                  humidity: 63,
-                },
-                wind: {
-                  speed: 4.63,
-                },
-                sys: {
-                  country: 'GB',
-                },
-              },
-            ],
+          weather: [
+            {
+              main: 'Clouds',
+              icon: '04n',
+            },
+          ],
+          main: {
+            temp: 28.48,
+            feels_like: 28.61,
+            humidity: 63,
+          },
+          wind: {
+            speed: 4.63,
+          },
+          sys: {
+            country: 'GB',
           },
         })
       );
 
       api.loadWeather('city', 'country', (headlines) => {
-        expect(headlines).toEqual([
-          {
-            weather: [
-              {
-                main: 'Clouds',
-                icon: '04n',
-              },
-            ],
-            main: {
-              temp: 28.48,
-              feels_like: 28.61,
-              humidity: 63,
+        expect(headlines).toEqual({
+          weather: [
+            {
+              main: 'Clouds',
+              icon: '04n',
             },
-            wind: {
-              speed: 4.63,
-            },
-            sys: {
-              country: 'GB',
-            },
+          ],
+          main: {
+            temp: 28.48,
+            feels_like: 28.61,
+            humidity: 63,
           },
-        ]);
+          wind: {
+            speed: 4.63,
+          },
+          sys: {
+            country: 'GB',
+          },
+        });
         done();
       });
     });

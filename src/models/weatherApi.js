@@ -11,7 +11,7 @@ class WeatherApi {
     )
       .then((info) => info.json())
       .then((responseJson) => {
-        callback(responseJson.response.results);
+        callback(responseJson);
       });
   }
 }
