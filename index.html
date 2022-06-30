@@ -4,9 +4,47 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">  
+  
   <title>Weather</title>
+
+  <link rel="stylesheet" href="./public/styles.css">
 </head>
 <body>
-  <h1>Hello</h1>
+
+  <div class="card">
+
+    <div class="search">
+      <input type="'text" class="search-bar" placeholder="Search"/>
+
+      <button>
+        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1.5em" width="1.5em" xmlns="http://www.w3.org/2000/svg">
+          <g>
+            <path fill="none" d="M0 0h24v24H0z"></path>
+          <path d="M12 14v2a6 6 0 0 0-6 6H4a8 8 0 0 1 8-8zm0-1c-3.315 0-6-2.685-6-6s2.685-6 6-6 6 2.685 6 6-2.685 6-6 6zm0-2c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm9.446 9.032l1.504 1.504-1.414 1.414-1.504-1.504a4 4 0 1 1 1.414-1.414zM18 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"></path>
+          </g>
+        </svg>
+      </button>
+    </div>
+
+    <div class="weather">
+      <h2 class="city">Weather in London</h2>
+      <h1 class="temperature">22°C</h1>
+      <div class="condition">Partly cloudy</div>
+      <div class="feelslike">Feels like: 20°C</div>
+      <img src="" alt="" class="icon" />
+      <div class="uv">UV Index: 2.0</div>
+      <div class="humidity">Humidity: 55%</div>
+      <div class="wind-kph">Wind speed: 22 km/h</div>
+    </div>
+
+
+
+  </div>
+
+  <script type="text/javascript" src="bundle.js"></script>
 </body>
 </html>

@@ -29,7 +29,7 @@ describe('WeatherApi', () => {
                   humidity: 60,
                 },
               },
-            ]
+            ],
           },
         })
       );
