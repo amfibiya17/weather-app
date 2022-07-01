@@ -55,7 +55,10 @@ describe('Weather view', () => {
 
     view.searchButtonEl.click();
 
-    expect(mockLoadWeather.mock.calls.length).toEqual(1);
-    expect(mockLoadWeather.mock.calls[0][0]).toEqual('City', 'Country');
+    expect(view.searchCityEl.value).toEqual('');
+    expect(view.searchCountryEl.value).toEqual('');
+
+    // expect(mockLoadWeather.mock.calls.length).toEqual(1);
+    // expect(mockLoadWeather.mock.calls[0][0]).toEqual('City', 'Country');
   });
 });

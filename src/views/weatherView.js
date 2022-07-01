@@ -12,10 +12,15 @@ class WeatherView {
         this.searchCityEl.value,
         this.searchCountryEl.value,
         (weather) => {
-          this.model.addWeather(weather);
-          this.searchCityEl.value = '';
-          this.searchCountryEl.value = '';
-          this.displayWeather();
+          if (weather.cod === 200) {
+            this.model.addWeather(weather);
+            this.searchCityEl.value = '';
+            this.searchCountryEl.value = '';
+            this.displayWeather();
+          } else {
+            document.querySelector('.weather').style.display = 'none';
+            document.querySelector('.error').style.display = '';
+          }
         }
       );
     });
@@ -23,6 +28,9 @@ class WeatherView {
 
   displayWeather() {
     const weather = this.model.getWeather();
+
+    document.querySelector('.error').style.display = 'none';
+    document.querySelector('.weather').style.display = '';
 
     document.querySelector('#city').innerText = weather.name;
 
