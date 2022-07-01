@@ -9,9 +9,9 @@ $coverage$
 ---
 
 - This web app gives the ability to check the current weather
-- This web app displays temperature, weather condition, humidity, wind speed
-- The user can search the weather temperature by putting required City or Country and City
-- Background images dynamically change when user reload the page
+- This web app displays temperature, weather condition, humidity and wind speed
+- The user can search the weather temperature by entering a City or Country and City
+- Background images dynamically change to specific place when the user searches for weather
 
 ---
 

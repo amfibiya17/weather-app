@@ -33,6 +33,7 @@ class WeatherView {
     document.querySelector('.weather').style.display = '';
 
     document.querySelector('#city').innerText = weather.name;
+    document.querySelector('#country').innerText = weather.sys.country;
 
     document.querySelector('#temperature').innerText = Math.round(
       weather.main.temp
@@ -54,6 +55,8 @@ class WeatherView {
     document.querySelector('#wind-kph').innerText = Math.round(
       weather.wind.speed
     );
+
+    document.body.style.backgroundImage = `url('https://source.unsplash.com/1600x900/?${weather.name},${weather.sys.country}')`;
   }
 }
 
