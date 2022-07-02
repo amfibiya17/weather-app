@@ -55,10 +55,30 @@ describe('Weather view', () => {
 
     view.searchButtonEl.click();
 
-    expect(view.searchCityEl.value).toEqual('');
-    expect(view.searchCountryEl.value).toEqual('');
+    expect(mockLoadWeather.mock.calls.length).toEqual(1);
+    expect(mockLoadWeather.mock.calls[0][0]).toEqual('City', 'Country');
+  });
 
-    // expect(mockLoadWeather.mock.calls.length).toEqual(1);
-    // expect(mockLoadWeather.mock.calls[0][0]).toEqual('City', 'Country');
+  describe('buttonCheck', () => {
+    it('input should be cleared on "search" button click', () => {
+      view.searchCityEl.value = 'City';
+      view.searchCountryEl.value = 'Country';
+
+      view.buttonCheck({
+        main: { temp: 18.67, feels_like: 18.03, humidity: 55 },
+        weather: [
+          {
+            main: 'Clouds',
+            icon: '04n',
+          },
+        ],
+        cod: 200,
+        sys: { country: 'FR' },
+        wind: { speed: 1.54 },
+      });
+
+      expect(view.searchCityEl.value).toEqual('');
+      expect(view.searchCountryEl.value).toEqual('');
+    });
   });
 });

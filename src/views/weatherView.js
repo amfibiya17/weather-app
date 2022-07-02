@@ -11,19 +11,22 @@ class WeatherView {
       this.api.loadWeather(
         this.searchCityEl.value,
         this.searchCountryEl.value,
-        (weather) => {
-          if (weather.cod === 200) {
-            this.model.addWeather(weather);
-            this.searchCityEl.value = '';
-            this.searchCountryEl.value = '';
-            this.displayWeather();
-          } else {
-            document.querySelector('.weather').style.display = 'none';
-            document.querySelector('.error').style.display = '';
-          }
-        }
+        this.buttonCheck
       );
     });
+  }
+
+  buttonCheck(weather) {
+    if (weather.cod === 200) {
+      console.log(weather);
+      this.model.addWeather(weather);
+      this.searchCityEl.value = '';
+      this.searchCountryEl.value = '';
+      this.displayWeather();
+    } else {
+      document.querySelector('.weather').style.display = 'none';
+      document.querySelector('.error').style.display = '';
+    }
   }
 
   displayWeather() {
