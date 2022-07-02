@@ -80,5 +80,17 @@ describe('Weather view', () => {
       expect(view.searchCityEl.value).toEqual('');
       expect(view.searchCountryEl.value).toEqual('');
     });
+
+    it('displays nothing if input is undefined', () => {
+      view.searchCityEl.value = '';
+      view.searchCountryEl.value = '';
+
+      view.buttonCheck({
+        cod: 400,
+        message: 'bad query',
+      });
+
+      expect(view.weather).toBe(undefined);
+    });
   });
 });
