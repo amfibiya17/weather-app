@@ -1,7 +1,7 @@
 Weather Web App
 ===
 
-$coverage$
+![](https://img.shields.io/badge/Coverage-100%25-83A603.svg?prefix=$coverage$)
 
 ### link --> [Weather Web App](http://weather--app.s3-website.eu-west-2.amazonaws.com/) <-- link
 

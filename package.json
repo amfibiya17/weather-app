@@ -1,10 +1,16 @@
 {
   "name": "weather-app",
+  "jest": {
+    "coverageReporters": [
+      "json-summary"
+    ]
+  },
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "coverage:badge": "coverage-badge-creator",
     "build": "esbuild ./index.js --bundle  --outfile=bundle.js --watch"
   },
   "keywords": [],
@@ -12,6 +18,7 @@
   "license": "ISC",
   "dependencies": {
     "build": "^0.1.4",
+    "coverage-badges-cli": "^1.0.10",
     "fs": "^0.0.1-security",
     "jest": "^28.1.1",
     "jest-environment-jsdom": "^28.1.2",
@@ -25,6 +32,7 @@
     "@types/node": "^16.11.41",
     "@typescript-eslint/eslint-plugin": "^5.29.0",
     "@typescript-eslint/parser": "^5.29.0",
+    "coverage-badge-creator": "^1.0.12",
     "eslint": "^8.18.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-typescript": "^16.2.0",
