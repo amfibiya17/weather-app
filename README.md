@@ -5,7 +5,7 @@ Weather Web App
 
 ### link --> [Weather Web App](http://weather--app.s3-website.eu-west-2.amazonaws.com/) <-- link
 
-![screenshot](https://i.postimg.cc/WbYFjLcm/Screenshot-2022-07-01-at-01-03-03.png)
+![screenshot](https://i.postimg.cc/762mT672/Screenshot.png)
 ---
 
 - This web app gives the ability to check the current weather
